@@ -23,7 +23,7 @@ def load_json(file_path):
         print(f"Error: Invalid JSON format in {file_path}")
         return None
 
-file_path = 'TokenSystemData_4-03-2025.json'
+file_path = 'TokenSystemData_EDGE_WEEK.json'
 all_objects = load_json(file_path)
 
 x = []
@@ -55,8 +55,8 @@ fig, ax = plt.subplots(figsize=(8,6))
 ax.scatter(x, y)
 
 # Generate data with a linear relationship
-dummyX = np.linspace(1, 25, 50)
-dummyY = -.5 * dummyX + 10  # Inverse linear relationship
+dummyX = np.linspace(1, max(x), 50)
+dummyY = -.5 * dummyX + max(y)  # Inverse linear relationship
 
 # Add some random noise to the data to simulate real-world data
 noise = np.random.normal(0, 1, 50)
