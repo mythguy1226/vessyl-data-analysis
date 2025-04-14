@@ -1,0 +1,12 @@
+{
+	"config":{
+		"data-file": "TokenSystemData_4-06-2025.json",
+		"x-axis": "timesCountered",
+		"y-axis-types":[
+		"ET_FANATIC"
+		],
+		"x-axis-label": "Times Countered",
+		"y-axis-label": "Times Hit By Fanatics",
+		"graph-title": "Comparison of player countering vs fanatic hits"
+	}
+}
