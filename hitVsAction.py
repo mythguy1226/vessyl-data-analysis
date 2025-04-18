@@ -85,7 +85,7 @@ else:
 
 # Remove outliers in data
 for i in range(len(x) - 1, -1, -1):
-    if x[i % len(x)] == 0 or y[i % len(y)] == 0 or x[i] > 25:
+    if x[i % len(x)] == 0 or y[i % len(y)] == 0 or x[i] > configData["config"]["max-range"]:
         del x[i]
         del y[i]
 
@@ -95,7 +95,9 @@ ax.scatter(x, y)
 
 # Generate data with a linear relationship
 dummyX = np.linspace(1, max(x), 20)
-dummyY = -.5 * dummyX + max(y)  # Inverse linear relationship
+dummySlope = (max(y) - min(y)) / (max(x) - min(y))
+#dummyY = -.5 * dummyX + max(y)  # Inverse linear relationship
+dummyY = -dummySlope * dummyX + max(y)  # Inverse linear relationship
 
 # Add some random noise to the data to simulate real-world data
 noise = np.random.normal(0, 1, 20)
@@ -106,8 +108,8 @@ ax.scatter(dummyX, y_noisy)
 
 # Plot the original inverse linear function without noise
 m, b = np.polyfit(np.array(x), np.array(y), 1)
-ax.plot(np.array(x), m*np.array(x) + b, color='green', label='Collected Dataset')
-ax.plot(dummyX, dummyY, color='red', label='Ideal Dataset')
+ax.plot(np.array(x), m*np.array(x) + b, color='green', label="Collected Dataset - Slope: %.2f" % (m))
+ax.plot(dummyX, dummyY, color='red', label="Ideal Dataset - Slope: %.2f" % (-dummySlope))
 leg = plt.legend(loc='upper center')
 
 plt.xlabel(configData["config"]["x-axis-label"])

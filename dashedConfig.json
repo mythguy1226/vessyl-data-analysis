@@ -1,13 +1,13 @@
 {
 	"config":{
-		"data-file": "TokenSystemData_4-06-2025.json",
+		"data-file": "Data/TokenSystemData_4-06-2025.json",
 		"x-axis": "timesSideDashed",
 		"y-axis-types":[
-		"ET_SOOTHSAYER",
-		"ET_BISHOP"
+		"ET_SOOTHSAYER"
 		],
 		"x-axis-label": "Times Side Dashed",
 		"y-axis-label": "Times Hit By Ranged",
-		"graph-title": "Comparison of player dashing vs ranged hits"
+		"graph-title": "Comparison of player dashing vs ranged hits",
+		"max-range": 500
 	}
 }
