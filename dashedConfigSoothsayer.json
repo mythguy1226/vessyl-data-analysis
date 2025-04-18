@@ -8,6 +8,6 @@
 		"x-axis-label": "Times Side Dashed",
 		"y-axis-label": "Times Hit By Ranged",
 		"graph-title": "Comparison of player dashing vs ranged hits",
-		"max-range": 500
+		"max-range": 25
 	}
 }

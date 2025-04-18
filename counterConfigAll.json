@@ -3,11 +3,13 @@
 		"data-file": "Data/TokenSystemData_4-06-2025.json",
 		"x-axis": "timesCountered",
 		"y-axis-types":[
-		"ET_FANATIC"
+		"ET_FANATIC",
+		"ET_TANK",
+		"ET_TEMPLAR"
 		],
 		"x-axis-label": "Times Countered",
-		"y-axis-label": "Times Hit By Fanatics",
-		"graph-title": "Comparison of player countering vs fanatic hits",
+		"y-axis-label": "Times Hit By All Melee",
+		"graph-title": "Comparison of player countering vs melee hits",
 		"max-range": 25
 	}
 }
